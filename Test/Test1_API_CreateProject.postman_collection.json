@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "ee5a2645-d3e7-49e6-adec-4f08193bac27",
+		"name": "Test1_API_CreateProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STEP1 - Login Into Todoist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "460c99d4-4724-4e7f-bb8b-bdfc46aca44c",
+						"exec": [
+							"var responsedata = JSON.parse(responseBody);\r",
+							"\r",
+							"//Checkpoint: Status Code is 201\r",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"//Checkpoint: Check the ResponseBody displayed\r",
+							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
+							"tests[\"Body contains name\"] = responseBody.has(\"name\");\r",
+							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
+							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
+							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
+							"\r",
+							"//console.log (\"id\", responsedata.id);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Origin",
+						"value": "https://zc4t00401.itcs.houston.dxccorp.net:8100"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "e41bfd4d-80d9-4ef3-a6ac-54e4dfa2eb1d"
+					},
+					{
+						"key": "If-Modified-Since",
+						"value": "0"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Referer",
+						"value": "https://hrdd-dev.int.hpe.com:8443/HRDDPlus/index.jsp"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811; JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1234,\r\n        \"name\": \"Inbox\",\r\n        \"comment_count\": 0\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"protocol": "https",
+					"host": [
+						"beta",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"API",
+						"v8",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP2 - Create Project",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "12aea6cc-449d-4b18-97ee-51734789bdfe",
+						"exec": [
+							"var responsedata = JSON.parse(responseBody);\r",
+							"\r",
+							"//Checkpoint: Status Code is 201\r",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"//Checkpoint: Check the ResponseBody displayed\r",
+							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
+							"tests[\"Body contains name\"] = responseBody.has(\"name\");\r",
+							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
+							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
+							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
+							"\r",
+							"//Checkpoint: Verified value for name\r",
+							"tests[\"Verified name value\"] = responsedata.name === \"bynemotest100\";\r",
+							"\r",
+							"//Checkpoint: Verified value for indent\r",
+							"tests[\"Verified indent value\"] = responsedata.indent === 1;\r",
+							"\r",
+							"//Checkpoint: Verified value for comment_count\r",
+							"tests[\"Verified comment_count value\"] = responsedata.comment_count === 0;\r",
+							"\r",
+							"//Console.log\r",
+							"console.log (\"id\", responsedata.id);\r",
+							"console.log (\"name\", responsedata.createdBy);\r",
+							"console.log (\"order\", responsedata.name);\r",
+							"console.log (\"indent\", responsedata.script);\r",
+							"console.log (\"comment_count\", responsedata.description);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"name\": \"Anitaassignment\"\n    }"
+				},
+				"url": {
+					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"protocol": "https",
+					"host": [
+						"beta",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"API",
+						"v8",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP3 - Get All Projects & Verify Project that created displayed in list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "12aea6cc-449d-4b18-97ee-51734789bdfe",
+						"exec": [
+							"var responsedata = JSON.parse(responseBody);\r",
+							"\r",
+							"//Checkpoint: Status Code is 201\r",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"//Checkpoint: Check the ResponseBody displayed\r",
+							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
+							"tests[\"Body contains name\"] = responseBody.has(\"name\");\r",
+							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
+							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
+							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
+							"\r",
+							"//Checkpoint : Verify Project that already created displayed\r",
+							"const SearchbyProjectName = responsedata.items.find((item) => String(item.name === \"Anitaassignment\"));\r",
+							"tests[\"Verify Project that already created displayed\"] = (SearchbyProjectName);\r",
+							"\r",
+							"//Console.log\r",
+							"console.log (\"id\", responsedata.id);\r",
+							"console.log (\"name\", responsedata.createdBy);\r",
+							"console.log (\"order\", responsedata.name);\r",
+							"console.log (\"indent\", responsedata.script);\r",
+							"console.log (\"comment_count\", responsedata.description);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"name\": \"bynemotest100\"\n    }"
+				},
+				"url": {
+					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"protocol": "https",
+					"host": [
+						"beta",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"API",
+						"v8",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "26ec3a9d-cb03-4fdd-9ff5-a18bf78886d3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "381de4b4-6ef5-47d0-b80a-661aaca8be00",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
