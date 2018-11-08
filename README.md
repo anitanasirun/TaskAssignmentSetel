@@ -12,6 +12,8 @@ Create test project via API.
 -Login via todoist using tokken
 -Create test Project
 
+https://github.com/anitanasirun/TaskAssignmentSetel/blob/master/Image%20Screenshot/Image1.png?raw=true
+
 MOBILE APP -Login into mobile application.
 - Screenshot attached 
 
