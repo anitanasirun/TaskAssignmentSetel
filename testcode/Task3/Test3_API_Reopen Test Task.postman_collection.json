@@ -25,7 +25,12 @@
 							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
 							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
 							"\r",
-							"//console.log (\"id\", responsedata.id);\r",
+							"console.log (\"id\", responsedata.id);\r",
+							"console.log (\"name\", responsedata.inamed);\r",
+							"console.log (\"order\", responsedata.order);\r",
+							"console.log (\"indent\", responsedata.indent);\r",
+							"console.log (\"comment_count\", responsedata.comment_count);\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
@@ -117,6 +122,76 @@
 			"response": []
 		},
 		{
+			"name": "Checking- Get Task Id Before Complete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df514249-e35e-4055-bf45-eb8ff8195a5f",
+						"exec": [
+							"var responsedata = JSON.parse(responseBody);\r",
+							"\r",
+							"//Checkpoint: Status Code is 201\r",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"\r",
+							"//Checkpoint: Check the ResponseBody displayed\r",
+							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
+							"tests[\"Body contains project_id\"] = responseBody.has(\"project_id\");\r",
+							"tests[\"Body contains content\"] = responseBody.has(\"content\");\r",
+							"tests[\"Body contains label_ids\"] = responseBody.has(\"label_ids\");\r",
+							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
+							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
+							"tests[\"Body contains priority\"] = responseBody.has(\"priority\");\r",
+							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
+							"tests[\"Body contains url\"] = responseBody.has(\"url\");\r",
+							"\r",
+							"\r",
+							"console.log (\"id\", responsedata.id);\r",
+							"console.log (\"project_id\", responsedata.inamed);\r",
+							"console.log (\"content\", responsedata.order);\r",
+							"console.log (\"label_ids\", responsedata.indent);\r",
+							"console.log (\"order\", responsedata.comment_count);\r",
+							"console.log (\"indent\", responsedata.comment_count);\r",
+							"console.log (\"priority\", responsedata.comment_count);\r",
+							"console.log (\"comment_count\", responsedata.comment_count);\r",
+							"console.log (\"url\", responsedata.comment_count);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://beta.todoist.com/API/v8/tasks?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"protocol": "https",
+					"host": [
+						"beta",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"API",
+						"v8",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
+						}
+					]
+				},
+				"description": "  https://beta.todoist.com/API/v8/tasks?token=a86b46215cbcd23a0d709c0152d36ecbed4a2443"
+			},
+			"response": []
+		},
+		{
 			"name": "STEP2 - Reopen test task via API",
 			"event": [
 				{
@@ -149,10 +224,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "  {\n        \"name\": \"Anitaassignment\"\n    }"
+					"raw": "  {\n        \"name\": \"Project A\"\n    }"
 				},
 				"url": {
-					"raw": "https://beta.todoist.com/API/v8/tasks/2890441682/reopen?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"raw": "https://beta.todoist.com/API/v8/tasks/2897574993/reopen?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
 					"protocol": "https",
 					"host": [
 						"beta",
@@ -163,7 +238,7 @@
 						"API",
 						"v8",
 						"tasks",
-						"2890441682",
+						"2897574993",
 						"reopen"
 					],
 					"query": [

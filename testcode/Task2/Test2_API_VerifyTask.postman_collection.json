@@ -25,7 +25,12 @@
 							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
 							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
 							"\r",
-							"//console.log (\"id\", responsedata.id);\r",
+							"console.log (\"id\", responsedata.id);\r",
+							"console.log (\"name\", responsedata.name);\r",
+							"console.log (\"order\", responsedata.order);\r",
+							"console.log (\"indent\", responsedata.indent);\r",
+							"console.log (\"comment_count\", responsedata.comment_count);\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
@@ -146,13 +151,9 @@
 							"tests[\"Search by Searchbyprojectid\"] = true;\r",
 							"\r",
 							"//Checkpoint: Verified value for content\r",
-							"const ContentTaskName = responsedata.content === \"DAY1 TASK ANITA\";\r",
+							"const ContentTaskName = responsedata.content === String(\"Day1 Task by Anita\");\r",
 							"tests[\"Search by content Task Name\"] = true;\r",
 							"\r",
-							"\r",
-							"//Console.log\r",
-							"console.log (\"id\", responsedata.project_id);\r",
-							"console.log (\"name\", responsedata.content);\r",
 							""
 						],
 						"type": "text/javascript"
@@ -174,10 +175,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "  {\n        \"name\": \"Anitaassignment\"\n    }"
+					"raw": ""
 				},
 				"url": {
-					"raw": "https://beta.todoist.com/API/v8/tasks?project_id=2198619280&token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"raw": "https://beta.todoist.com/API/v8/tasks?project_id=2198952609&token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
 					"protocol": "https",
 					"host": [
 						"beta",
@@ -192,7 +193,7 @@
 					"query": [
 						{
 							"key": "project_id",
-							"value": "2198619280"
+							"value": "2198952609"
 						},
 						{
 							"key": "token",
