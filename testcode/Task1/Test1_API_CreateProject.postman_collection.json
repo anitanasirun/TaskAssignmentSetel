@@ -25,12 +25,8 @@
 							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
 							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
 							"\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.name);\r",
-							"console.log (\"order\", responsedata.order);\r",
-							"console.log (\"indent\", responsedata.indent);\r",
-							"console.log (\"comment_count\", responsedata.comment_count);\r",
-							""
+							"//Console.log\r",
+							"console.log (\"Responsebody\", responseBody)"
 						],
 						"type": "text/javascript"
 					}
@@ -151,10 +147,10 @@
 							"\r",
 							"//Console.log\r",
 							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.createdBy);\r",
+							"console.log (\"name\", responsedata.name);\r",
 							"console.log (\"order\", responsedata.name);\r",
-							"console.log (\"indent\", responsedata.script);\r",
-							"console.log (\"comment_count\", responsedata.description);"
+							"console.log (\"indent\", responsedata.indent);\r",
+							"console.log (\"comment_count\", responsedata.comment_count);"
 						],
 						"type": "text/javascript"
 					}
@@ -225,11 +221,7 @@
 							"tests[\"Verify Project that already created displayed\"] = true;\r",
 							"\r",
 							"//Console.log\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.createdBy);\r",
-							"console.log (\"order\", responsedata.name);\r",
-							"console.log (\"indent\", responsedata.script);\r",
-							"console.log (\"comment_count\", responsedata.description);"
+							"console.log (\"Responsebody\", responseBody)"
 						],
 						"type": "text/javascript"
 					}

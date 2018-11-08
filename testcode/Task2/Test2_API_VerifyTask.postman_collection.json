@@ -25,12 +25,8 @@
 							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
 							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
 							"\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.name);\r",
-							"console.log (\"order\", responsedata.order);\r",
-							"console.log (\"indent\", responsedata.indent);\r",
-							"console.log (\"comment_count\", responsedata.comment_count);\r",
-							"\r",
+							"//console.log\r",
+							"console.log (\"Responsebody\", responseBody)\r",
 							""
 						],
 						"type": "text/javascript"
@@ -153,7 +149,6 @@
 							"//Checkpoint: Verified value for content\r",
 							"const ContentTaskName = responsedata.content === String(\"Day1 Task by Anita\");\r",
 							"tests[\"Search by content Task Name\"] = true;\r",
-							"\r",
 							""
 						],
 						"type": "text/javascript"

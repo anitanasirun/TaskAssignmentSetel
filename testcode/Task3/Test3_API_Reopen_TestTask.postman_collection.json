@@ -25,12 +25,8 @@
 							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
 							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
 							"\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.inamed);\r",
-							"console.log (\"order\", responsedata.order);\r",
-							"console.log (\"indent\", responsedata.indent);\r",
-							"console.log (\"comment_count\", responsedata.comment_count);\r",
-							"\r",
+							"//console.log\r",
+							"console.log (\"Responsebody\", responseBody)\r",
 							""
 						],
 						"type": "text/javascript"
@@ -146,15 +142,8 @@
 							"tests[\"Body contains url\"] = responseBody.has(\"url\");\r",
 							"\r",
 							"\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"project_id\", responsedata.inamed);\r",
-							"console.log (\"content\", responsedata.order);\r",
-							"console.log (\"label_ids\", responsedata.indent);\r",
-							"console.log (\"order\", responsedata.comment_count);\r",
-							"console.log (\"indent\", responsedata.comment_count);\r",
-							"console.log (\"priority\", responsedata.comment_count);\r",
-							"console.log (\"comment_count\", responsedata.comment_count);\r",
-							"console.log (\"url\", responsedata.comment_count);"
+							"//console.log\r",
+							"console.log (\"Responsebody\", responseBody)"
 						],
 						"type": "text/javascript"
 					}
@@ -203,7 +192,10 @@
 							"tests[\"Status code is 204\"] = responseCode.code === 204;",
 							"",
 							"//Checkpoint: Check Response Body is empty",
-							"tests[\"Response Body is empty\"] = (responseBody!==null && responseBody.length===0);"
+							"tests[\"Response Body is empty\"] = (responseBody!==null && responseBody.length===0);",
+							"",
+							"//console.log",
+							"console.log (\"Responsebody\", responseBody)"
 						],
 						"type": "text/javascript"
 					}
