@@ -1,4 +1,4 @@
-API Tools - Postman /Newman
+﻿API Tools - Postman /Newman
 Mobile android Emulator = LeapDroid
 API URL captured = Telerik Fiddler
 Documentation reference = https://developer.todoist.com/rest/v8/
@@ -10,9 +10,9 @@ Task 1
 Steps:POSTMAN API
 Create test project via API.
 -Login via todoist using tokken
--Create test Project
+Create test Project
 
-https://github.com/anitanasirun/TaskAssignmentSetel/blob/master/Image%20Screenshot/Image1.png?raw=true
+
 
 
 MOBILE APP -Login into mobile application.

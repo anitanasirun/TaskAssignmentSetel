@@ -1,0 +1,526 @@
+{
+	"id": "85465166-330e-49d4-9ac9-53f6a29bb7de",
+	"name": "Test3_API_Reopen Test Task",
+	"allTests": [],
+	"timestamp": "2018-11-08T18:48:26.460Z",
+	"collection_id": "cf0b6970-dbfd-4011-bcea-746734feb028",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cf0b6970-dbfd-4011-bcea-746734feb028",
+		"name": "Test3_API_Reopen Test Task",
+		"description": "",
+		"auth": null,
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "26ec3a9d-cb03-4fdd-9ff5-a18bf78886d3",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "381de4b4-6ef5-47d0-b80a-661aaca8be00",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": [],
+		"order": [
+			"49372765-af96-4989-b361-13684ff13303",
+			"060d4cdf-f29d-41c4-914f-eb9b93d37dc0",
+			"b453dc70-2d4f-4c53-a18d-655c00ed7f62"
+		],
+		"folders_order": [],
+		"owner": "572926",
+		"permissions": {},
+		"favorite": true,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "echo_digest_realm",
+			"type": "text",
+			"value": "Users",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_nonce",
+			"type": "text",
+			"value": "2X3vltBetfTnJw2gk3233sC6FqM6sHCr",
+			"enabled": true
+		},
+		{
+			"key": "newPPID",
+			"type": "text",
+			"value": "121",
+			"enabled": true
+		},
+		{
+			"key": "newDSSqlID",
+			"type": "text",
+			"value": "84",
+			"enabled": true
+		},
+		{
+			"key": "newDSOracleID",
+			"type": "text",
+			"value": "10",
+			"enabled": true
+		},
+		{
+			"key": "SubsID",
+			"type": "text",
+			"value": "64",
+			"enabled": true
+		},
+		{
+			"key": "newDataObjectID",
+			"type": "text",
+			"value": "194",
+			"enabled": true
+		},
+		{
+			"key": "SubsIDcurl",
+			"type": "text",
+			"value": "11",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID3",
+			"type": "text",
+			"value": "159",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID4",
+			"type": "text",
+			"value": "160",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID5",
+			"type": "text",
+			"value": "161",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID6",
+			"type": "text",
+			"value": "162",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID7",
+			"type": "text",
+			"value": "163",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID8",
+			"type": "text",
+			"value": "164",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID2",
+			"type": "text",
+			"value": "207",
+			"enabled": true
+		},
+		{
+			"key": "newUserID",
+			"type": "text",
+			"value": "45555553",
+			"enabled": true
+		},
+		{
+			"key": "newLoginID",
+			"type": "text",
+			"value": "23052610",
+			"enabled": true
+		},
+		{
+			"key": "SubsIDsftp",
+			"type": "text",
+			"value": "527",
+			"enabled": true
+		},
+		{
+			"key": "newPpID",
+			"type": "text",
+			"value": "4",
+			"enabled": true
+		},
+		{
+			"key": "PPVersionID",
+			"type": "text",
+			"value": "1a59",
+			"enabled": true
+		},
+		{
+			"key": "newSubscriptionID",
+			"type": "text",
+			"value": "31",
+			"enabled": true
+		},
+		{
+			"key": "newDataFieldID1",
+			"type": "text",
+			"value": "710",
+			"enabled": true
+		},
+		{
+			"key": "newDGID",
+			"type": "text",
+			"value": "9",
+			"enabled": true
+		},
+		{
+			"key": "newDSFileID",
+			"type": "text",
+			"value": "9",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "STEP1 - Login Into Todoist",
+			"id": "49372765-af96-4989-b361-13684ff13303",
+			"url": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Status code is 200",
+				"status": "pass",
+				"Body contains id": true,
+				"Body contains name": true,
+				"Body contains order": true,
+				"Body contains indent": true,
+				"Body contains comment_count": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains order": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains indent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains comment_count": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"963"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body contains id": true,
+					"Body contains name": true,
+					"Body contains order": true,
+					"Body contains indent": true,
+					"Body contains comment_count": true
+				}
+			],
+			"time": "963",
+			"totalRequestTime": "963",
+			"iterationResults": {}
+		},
+		{
+			"name": "Checking- Get Task Id Before Complete",
+			"id": "060d4cdf-f29d-41c4-914f-eb9b93d37dc0",
+			"url": "https://beta.todoist.com/API/v8/tasks?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Status code is 200",
+				"status": "pass",
+				"Body contains id": true,
+				"Body contains project_id": true,
+				"Body contains content": true,
+				"Body contains label_ids": true,
+				"Body contains order": true,
+				"Body contains indent": true,
+				"Body contains priority": true,
+				"Body contains comment_count": true,
+				"Body contains url": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains project_id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains label_ids": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains order": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains indent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains priority": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains comment_count": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains url": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"939"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body contains id": true,
+					"Body contains project_id": true,
+					"Body contains content": true,
+					"Body contains label_ids": true,
+					"Body contains order": true,
+					"Body contains indent": true,
+					"Body contains priority": true,
+					"Body contains comment_count": true,
+					"Body contains url": true
+				}
+			],
+			"time": "939",
+			"totalRequestTime": "939",
+			"iterationResults": {}
+		},
+		{
+			"name": "STEP2 - Reopen test task via API",
+			"id": "b453dc70-2d4f-4c53-a18d-655c00ed7f62",
+			"url": "https://beta.todoist.com/API/v8/tasks/2897574993/reopen?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "Status code is 204",
+				"status": "pass",
+				"Response Body is empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"21898"
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Response Body is empty": true
+				}
+			],
+			"time": "21898",
+			"totalRequestTime": "21898",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 18,
+	"totalFail": 0,
+	"totalTime": 23800,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "STEP1 - Login Into Todoist",
+			"id": "49372765-af96-4989-b361-13684ff13303",
+			"url": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"time": "2018-11-08T18:48:26.460Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains order": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains indent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains comment_count": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Checking- Get Task Id Before Complete",
+			"id": "060d4cdf-f29d-41c4-914f-eb9b93d37dc0",
+			"url": "https://beta.todoist.com/API/v8/tasks?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"time": "2018-11-08T18:48:26.460Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains project_id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains content": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains label_ids": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains order": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains indent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains priority": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains comment_count": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains url": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "STEP2 - Reopen test task via API",
+			"id": "b453dc70-2d4f-4c53-a18d-655c00ed7f62",
+			"url": "https://beta.todoist.com/API/v8/tasks/2897574993/reopen?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+			"time": "2018-11-08T18:48:26.460Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body is empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

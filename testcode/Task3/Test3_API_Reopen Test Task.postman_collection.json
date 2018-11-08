@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ee5a2645-d3e7-49e6-adec-4f08193bac27",
-		"name": "Test1_API_CreateProject",
+		"_postman_id": "cf0b6970-dbfd-4011-bcea-746734feb028",
+		"name": "Test3_API_Reopen Test Task",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -117,40 +117,18 @@
 			"response": []
 		},
 		{
-			"name": "STEP2 - Create Project",
+			"name": "STEP2 - Reopen test task via API",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"id": "12aea6cc-449d-4b18-97ee-51734789bdfe",
 						"exec": [
-							"var responsedata = JSON.parse(responseBody);\r",
-							"\r",
-							"//Checkpoint: Status Code is 201\r",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-							"\r",
-							"//Checkpoint: Check the ResponseBody displayed\r",
-							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
-							"tests[\"Body contains name\"] = responseBody.has(\"name\");\r",
-							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
-							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
-							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
-							"\r",
-							"//Checkpoint: Verified value for name\r",
-							"tests[\"Verified name value\"] = responsedata.name === \"bynemotest100\";\r",
-							"\r",
-							"//Checkpoint: Verified value for indent\r",
-							"tests[\"Verified indent value\"] = responsedata.indent === 1;\r",
-							"\r",
-							"//Checkpoint: Verified value for comment_count\r",
-							"tests[\"Verified comment_count value\"] = responsedata.comment_count === 0;\r",
-							"\r",
-							"//Console.log\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.createdBy);\r",
-							"console.log (\"order\", responsedata.name);\r",
-							"console.log (\"indent\", responsedata.script);\r",
-							"console.log (\"comment_count\", responsedata.description);"
+							"//Checkpoint: Status Code is 204",
+							"tests[\"Status code is 204\"] = responseCode.code === 204;",
+							"",
+							"//Checkpoint: Check Response Body is empty",
+							"tests[\"Response Body is empty\"] = (responseBody!==null && responseBody.length===0);"
 						],
 						"type": "text/javascript"
 					}
@@ -165,8 +143,8 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -174,7 +152,7 @@
 					"raw": "  {\n        \"name\": \"Anitaassignment\"\n    }"
 				},
 				"url": {
-					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
+					"raw": "https://beta.todoist.com/API/v8/tasks/2890441682/reopen?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
 					"protocol": "https",
 					"host": [
 						"beta",
@@ -184,82 +162,9 @@
 					"path": [
 						"API",
 						"v8",
-						"projects"
-					],
-					"query": [
-						{
-							"key": "token",
-							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "STEP3 - Get All Projects & Verify Project that created displayed in list",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "12aea6cc-449d-4b18-97ee-51734789bdfe",
-						"exec": [
-							"var responsedata = JSON.parse(responseBody);\r",
-							"\r",
-							"//Checkpoint: Status Code is 201\r",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-							"\r",
-							"//Checkpoint: Check the ResponseBody displayed\r",
-							"tests[\"Body contains id\"] = responseBody.has(\"id\");\r",
-							"tests[\"Body contains name\"] = responseBody.has(\"name\");\r",
-							"tests[\"Body contains order\"] = responseBody.has(\"order\");\r",
-							"tests[\"Body contains indent\"] = responseBody.has(\"indent\");\r",
-							"tests[\"Body contains comment_count\"] = responseBody.has(\"comment_count\");\r",
-							"\r",
-							"//Checkpoint : Verify Project that already created displayed\r",
-							"const SearchbyProjectName = responsedata.items.find((item) => String(item.name === \"Anitaassignment\"));\r",
-							"tests[\"Verify Project that already created displayed\"] = (SearchbyProjectName);\r",
-							"\r",
-							"//Console.log\r",
-							"console.log (\"id\", responsedata.id);\r",
-							"console.log (\"name\", responsedata.createdBy);\r",
-							"console.log (\"order\", responsedata.name);\r",
-							"console.log (\"indent\", responsedata.script);\r",
-							"console.log (\"comment_count\", responsedata.description);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "  {\n        \"name\": \"bynemotest100\"\n    }"
-				},
-				"url": {
-					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
-					"protocol": "https",
-					"host": [
-						"beta",
-						"todoist",
-						"com"
-					],
-					"path": [
-						"API",
-						"v8",
-						"projects"
+						"tasks",
+						"2890441682",
+						"reopen"
 					],
 					"query": [
 						{
