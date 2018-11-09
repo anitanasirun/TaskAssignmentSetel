@@ -1,8 +1,10 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "1cbb7fe1-9975-4250-a42b-8610ff5ec3d9",
 		"name": "Test2_API_VerifyTask",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "1cbb7fe1-9975-4250-a42b-8610ff5ec3d9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -11,7 +13,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "460c99d4-4724-4e7f-bb8b-bdfc46aca44c",
+						"type": "text/javascript",
 						"exec": [
 							"var responsedata = JSON.parse(responseBody);\r",
 							"\r",
@@ -28,92 +30,80 @@
 							"//console.log\r",
 							"console.log (\"Responsebody\", responseBody)\r",
 							""
-						],
-						"type": "text/javascript"
+						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
+				"url": "  https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Pragma",
-						"value": "no-cache"
+						"value": "no-cache",
+						"description": ""
 					},
 					{
 						"key": "Origin",
-						"value": "https://zc4t00401.itcs.houston.dxccorp.net:8100"
+						"value": "https://zc4t00401.itcs.houston.dxccorp.net:8100",
+						"description": ""
 					},
 					{
 						"key": "User-Agent",
-						"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+						"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36",
+						"description": ""
 					},
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/x-www-form-urlencoded",
-						"type": "text"
+						"description": ""
 					},
 					{
 						"key": "Cache-Control",
-						"value": "no-cache"
+						"value": "no-cache",
+						"description": ""
 					},
 					{
 						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
-						"value": "e41bfd4d-80d9-4ef3-a6ac-54e4dfa2eb1d"
+						"value": "e41bfd4d-80d9-4ef3-a6ac-54e4dfa2eb1d",
+						"description": ""
 					},
 					{
 						"key": "If-Modified-Since",
-						"value": "0"
+						"value": "0",
+						"description": ""
 					},
 					{
 						"key": "Accept",
-						"value": "*/*"
+						"value": "*/*",
+						"description": ""
 					},
 					{
 						"key": "Referer",
-						"value": "https://hrdd-dev.int.hpe.com:8443/HRDDPlus/index.jsp"
+						"value": "https://hrdd-dev.int.hpe.com:8443/HRDDPlus/index.jsp",
+						"description": ""
 					},
 					{
 						"key": "Accept-Encoding",
-						"value": "gzip, deflate, br"
+						"value": "gzip, deflate, br",
+						"description": ""
 					},
 					{
 						"key": "Accept-Language",
-						"value": "en-US,en;q=0.8"
+						"value": "en-US,en;q=0.8",
+						"description": ""
 					},
 					{
 						"key": "Cookie",
-						"value": "JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811; JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811"
+						"value": "JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811; JSESSIONID=B2A39278AC985D30310383B256DA5832.tomcat6-c9t04623; km_lv=x; _ga=GA1.2.1772459245.1476673107; km_ai=353811; km_ni=353811",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "[\r\n    {\r\n        \"id\": 1234,\r\n        \"name\": \"Inbox\",\r\n        \"comment_count\": 0\r\n    }\r\n]"
 				},
-				"url": {
-					"raw": "https://beta.todoist.com/API/v8/projects?token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
-					"protocol": "https",
-					"host": [
-						"beta",
-						"todoist",
-						"com"
-					],
-					"path": [
-						"API",
-						"v8",
-						"projects"
-					],
-					"query": [
-						{
-							"key": "token",
-							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
-						}
-					]
-				}
+				"description": null
 			},
 			"response": []
 		},
@@ -123,7 +113,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "12aea6cc-449d-4b18-97ee-51734789bdfe",
+						"type": "text/javascript",
 						"exec": [
 							"var responsedata = JSON.parse(responseBody);\r",
 							"\r",
@@ -143,83 +133,34 @@
 							"tests[\"Body url\"] = responseBody.has(\"url\");\r",
 							"\r",
 							"//Checkpoint: Verified value for project_id\r",
-							"const Searchbyprojectid = responsedata.project_id === Number(2198619280);\r",
+							"const Searchbyprojectid = responsedata.project_id === Number(2198952609);\r",
 							"tests[\"Search by Searchbyprojectid\"] = true;\r",
 							"\r",
 							"//Checkpoint: Verified value for content\r",
 							"const ContentTaskName = responsedata.content === String(\"Day1 Task by Anita\");\r",
 							"tests[\"Search by content Task Name\"] = true;\r",
 							""
-						],
-						"type": "text/javascript"
+						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
+				"url": "  https://beta.todoist.com/API/v8/tasks?project_id=2198952609&token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
-						"type": "text"
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "https://beta.todoist.com/API/v8/tasks?project_id=2198952609&token=3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c",
-					"protocol": "https",
-					"host": [
-						"beta",
-						"todoist",
-						"com"
-					],
-					"path": [
-						"API",
-						"v8",
-						"tasks"
-					],
-					"query": [
-						{
-							"key": "project_id",
-							"value": "2198952609"
-						},
-						{
-							"key": "token",
-							"value": "3a962c29757fdf1d2cf0d11d8ecc42d669b87c7c"
-						}
-					]
-				}
+				"description": ""
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "26ec3a9d-cb03-4fdd-9ff5-a18bf78886d3",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "381de4b4-6ef5-47d0-b80a-661aaca8be00",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
 		}
 	]
 }
